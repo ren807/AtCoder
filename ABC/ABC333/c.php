@@ -1,4 +1,5 @@
 <?php
+// 途中・・・
 
 function strings() { return explode(' ', trim(fgets(STDIN))); }
 function ints() { return array_map('intval', strings()); }
@@ -27,9 +28,13 @@ function main() {
 				}
 			}
 			$num = strrev($rev_num);
-			$cnt++;
 		}
+		$i=0;
+		$cnt++;
+
+		if ($cnt === $n) break;
 	}
+	output($num);
 }
 
 main();
